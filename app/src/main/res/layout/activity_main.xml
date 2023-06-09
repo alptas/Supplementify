@@ -16,30 +16,7 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/mobile_navigation" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:cardBackgroundColor="@color/lavender"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:elevation="20dp"
-        app:cardCornerRadius="20dp"
-        tools:ignore="MissingConstraints">
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/imageslider"
-            app:iss_period="1000"
-            app:iss_auto_cycle="true"
-            app:iss_delay="1000"
-            app:iss_corner_radius="20" app:iss_title_background="@drawable/round_bk3">
-
-        </com.denzcoskun.imageslider.ImageSlider>
-
-
-    </androidx.cardview.widget.CardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"

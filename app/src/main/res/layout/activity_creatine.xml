@@ -1,9 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.CreatineActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:text="CREATİNE"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="408dp"
+            android:layout_height="313dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_bk2"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="40dp"
+                android:text="
+Kreatin takviyesi, kas kütlesinin artışına ve spor performansının iyileştirilmesine yardımcı olabilir. Bu takviye, kreatin fosfat depolarını artırarak daha fazla enerji sağlar ve kasların daha hızlı toparlanmasını destekler. Bununla birlikte, herkes için uygun olmayabilir ve doktor önerisi almak önemlidir."
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/round_bk3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Besin Değerleri"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!-- Tablo başlık satırı -->
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="AMİNO ASİT DEĞERLERİ"
+                        android:padding="56dp"
+                        android:background="#CCCCCC"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="3 g "
+                        android:padding="56dp"
+                        android:background="#CCCCCC"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Tablo satırları -->
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Kreatin Monohidrat"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="3000mg"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+
+
+            </TableLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

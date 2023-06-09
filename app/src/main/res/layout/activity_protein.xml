@@ -1,93 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ProteinActivity">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="408dp"
-        android:layout_height="313dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/round_bk2"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TextView
-            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Protein; kas kütlesinin artışına ve korunmasına, normal kemiklerin korunmasına katkıda bulunur."
-            android:textSize="20sp"
+            android:padding="0dp"
+            android:text="PROTEİN"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="408dp"
+            android:layout_height="313dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_bk2"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Yüksek proteinli beslenmek spordaki hedeflerine ulaşman için gereklidir. Spor salonuna uzun süre gidip, yeterli kas gelişimi gösterilememesinin en büyük sebeplerinden biri yeterli protein tüketmemektir. Mevcut kas kütlesini korumak ve zayıflandığında formda ve sıkı bir vücut elde etmek için yüksek protein tüketmek gerekir."
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="40dp"
+                android:text="Protein; kas kütlesinin artışına ve korunmasına, normal kemiklerin korunmasına katkıda bulunur. Yüksek proteinli beslenmek spordaki hedeflerine ulaşman için gereklidir. Spor salonuna uzun süre gidip, yeterli kas gelişimi gösterilememesinin en büyük sebeplerinden biri yeterli protein tüketmemektir. Mevcut kas kütlesini korumak ve zayıflandığında formda ve sıkı bir vücut elde etmek için yüksek protein tüketmek gerekir."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/round_bk3"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Besin Değerleri"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <!-- Tablo başlık satırı -->
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Besin Değerleri"
+                        android:padding="58dp"
+                        android:background="#CCCCCC"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="25 g SERVİS İÇİN"
+                        android:padding="58dp"
+                        android:background="#CCCCCC"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+                </TableRow>
+
+                <!-- Tablo satırları -->
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Enerji"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="438kj/ 104 kcal"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Protein"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="18.4 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Karbonhidrat"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="3.6 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Şeker"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="1.6 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Yağ"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="1.7 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Doymuş Yağ"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="1.3 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Tuz"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="0.15 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="B6 Vitamini"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="1.4 g"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Digestive Enzyme Blend"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        android:layout_column="2"
+                        android:text="50 mg"
+                        android:padding="38dp"
+                        android:background="@android:color/white" />
+                </TableRow>
+
+            </TableLayout>
+
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="356dp"
-        android:layout_marginTop="9dp"
-        android:background="@drawable/round_bk3"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
-
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:padding="8dp">
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Besin Değeri"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="25 g servis için"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Enerji"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="438 kj / 104 kcal" />
-            </TableRow>
-
-            <!-- Diğer besin değerlerini buraya ekleyin -->
-
-        </TableLayout>
-
-
-    </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
